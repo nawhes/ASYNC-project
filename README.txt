@@ -5,8 +5,8 @@ WebPage Structure
 ---left.html
 ---noside.html
 ---elements.html
----*,css
----*.js
+
+---design.js
 
 --src
 ---pic01.jpg
@@ -21,3 +21,9 @@ WebPage Structure
 ---slide01.jpg
 ---slide02.jpg
 ---slide03.jpg
+---icon.jpg
+
+
+
+
+design.js
