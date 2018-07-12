@@ -1,0 +1,28 @@
+section{text-align: center;} 
+section.A{
+	background-color: #494d53;
+	color : white;
+}
+#Ase{}
+section.B{
+	background-color: #f2f2f2;
+
+}
+section.D{
+	background-color: #e0555a;
+}
+div.E{
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+div.sec_A{
+	display: inline-block;
+	height: 300px;
+	width: 350px;
+
+}
+div.div_A{
+	height: 60%;
+	width: 60%;
+}
