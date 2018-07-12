@@ -1,3 +1,0 @@
-kyeongmi
-
-kyungmi 2
