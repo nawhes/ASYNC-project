@@ -840,8 +840,11 @@ pre{display:block;font-size:87.5%;color:#212529}
  	.tab-content>.tab-pane{display:none}
  	.tab-content>.active{display:block}
  	.navbar{
+		
+		/* background-color: #FFFFFF; */
 
  		position:fixed;
+ 		z-index: 1030;
  		width: 100%;
 
  		display:-ms-flexbox;

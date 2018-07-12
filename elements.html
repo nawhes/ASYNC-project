@@ -1,62 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="css/nawhes.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
 	<title></title>
-	<script type="text/javascript" src="design.js"></script>
+
 </head>
 <body>
-	<nav>
-		<a href="index.html" target="_self">
-			<b>HTML5 Website</b> by Hteml5webtemplates.co.uk
-		</a>
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 		
-		<ul>
-			<li>
-				<a href="index.html" target="_self">
-					Home
-				</a>
-			</li>
-			<li>
-				<ul>
-					<li>
-						<a href="left.html" target="_self">
-							Left Sidebar
-						</a>
-					</li>
-					<li>
-						<a href="right.html" target="_self">
-							Right Sidebar
-						</a>
-					</li>
-					<li>
-						<a href="noside.html" target="_self">
-							No Sidebar
-						</a>
-					</li>
-					<li>
-						<ul>Submenu
-							<li>
-								Option 1
-							</li>
-							<li>
-								Option 2
-							</li>
-							<li>
-								Option 3
-							</li>
-							<li>
-								Option 4
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<a href="elements.html" target="_self">
-					Elements
-				</a>
-			</li>
-		</ul>
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+			<a class="navbar-brand" href="index.html">
+				<b>HTML5 Website</b> by Hteml5webtemplates.co.uk
+			</a>
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layouts</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="left.html">Left Sidebar</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="right.html">Right Sidebar</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="noside.html">No Sidebar</a>
+						<div class="dropdown-divider"></div>
+						<div class="dropdown-item">Submenu</div>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="elements.html">Elements</a>
+				</li>
+			</ul>
+		</div>
 	</nav>
 
 	<article>
@@ -669,19 +656,19 @@ print 'It took ' + i + ' iterations to sort the deck.';
 	<footer>
 		<div>
 			<a href="#" target="_self">
-				<button><img src="src/icon.jpg" alt="twitter"></button>
+				<span class="fab fa-twitter"></span>
 			</a>
 			<a href="#" target="_self">
-				<button><img src="src/icon.jpg" alt="facebook"></button>
+				<span class="fab fa-facebook"></span>
 			</a>
 			<a href="#" target="_self">
-				<button><img src="src/icon.jpg" alt="instagram"></button>
+				<span class="fab fa-instagram"></span>
 			</a>
 			<a href="#" target="_self">
-				<button><img src="src/icon.jpg" alt="ball"></button>
+				<span class="fab fa-dribbble"></span>
 			</a>
 			<a href="#" target="_self">
-				<button><img src="src/icon.jpg" alt="mail"></button>
+				<span class="fas fa-envelope"></span>
 			</a>
 		</div>
 		<div>
@@ -708,8 +695,12 @@ print 'It took ' + i + ' iterations to sort the deck.';
 				</li>
 			</ul>
 		</div>
-		@Copyright. All rights reserved Design by <a href="https://www.html5webtemplates.co.uk/" target="_self">Responsive Web Templates</a>
+		@Copyright. All rights reserved Design by <a href="https://www.html5webtemplates.co.uk/" target="_self" style="color: #dc3545">Responsive Web Templates</a>
 	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>
