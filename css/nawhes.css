@@ -55,8 +55,8 @@ footer span{
 
 @media (min-width: 992px){
 	.navalt{
-		background-color: rgba(0,0,0,0);
-		color: #ffffff;
+		background-color: rgba(0,0,0,1);
+		color: #000000;
 	}
 }
 
