@@ -6,6 +6,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	
+	<link rel="stylesheet" href="css/design.css">
 	<link rel="stylesheet" href="css/nawhes.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
@@ -13,13 +15,45 @@
 	<title></title>
 
 </head>
-<body style="background-color: #f2f2f2">
-	<nav class="navbar navbar-expand-lg navbar-light">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		
-		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+<body>
+
+<!-- togglemenu pagewidth < 992px -->
+
+	<button class="menutoggler" style="position: fixed; z-index: 10002;  width: 4em; height: 3em; top: 5px; left: 5px;">
+		Toggler
+	</button>
+	<div class="togglebar">
+		<ul>
+			<a href="index.html">
+				<li>Home</li>
+			</a>
+			<br>
+			<li>Layouts</li>
+			<a href="left.html">
+				<li>Left Sidebar</li>
+			</a>
+			<a href="right.html">
+				<li>Right Sidebar</li>
+			</a>
+			<a href="noside.html">
+				<li>No Sidebar</li>
+			</a>
+			<li>Submenu</li>
+			<div style="padding-left: 15px">
+				<li>Option 1</li>
+				<li>Option 2</li>
+				<li>Option 3</li>
+				<li>Option 4</li>
+			</div>
+			<a href="elements.html">
+				<li>Elements</li>
+			</a>
+		</ul>
+	</div>
+
+<!-- navigation menu pagewidth > 992px  -->
+	<nav class="navbar navbar-expand-lg navbar-light" id="scrollreact">
+		<div class="collapse navbar-collapse">
 			<a class="navbar-brand" href="index.html">
 				<b>HTML5 Website</b> by Hteml5webtemplates.co.uk
 			</a>
@@ -46,13 +80,14 @@
 		</div>
 	</nav>
 
-	<section class="container">
-		<h2>No Sidebar</h2>
-		<div>
-			Faucibus neque adipiscing mi lorem semper blandit
-		</div>
-		
 
+	<article>
+
+		<h2>No Sidebar</h2>
+			<div>
+				Faucibus neque adipiscing mi lorem semper blandit
+			</div>
+		<section class="container row">
 			<!-- Main -->
 			<div class="card" style="text-align: left; padding: 20px">
 				<a href="#" target="_self">
@@ -131,6 +166,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/nawhes.js"></script>
 
 </body>
 </html>

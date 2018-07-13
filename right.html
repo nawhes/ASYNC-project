@@ -6,6 +6,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	
+	<link rel="stylesheet" href="css/design.css">
 	<link rel="stylesheet" href="css/nawhes.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
@@ -14,12 +16,44 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		
-		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+<!-- togglemenu pagewidth < 992px -->
+
+	<button class="menutoggler" style="position: fixed; z-index: 10002;  width: 4em; height: 3em; top: 5px; left: 5px;">
+		Toggler
+	</button>
+	<div class="togglebar">
+		<ul>
+			<a href="index.html">
+				<li>Home</li>
+			</a>
+			<br>
+			<li>Layouts</li>
+			<a href="left.html">
+				<li>Left Sidebar</li>
+			</a>
+			<a href="right.html">
+				<li>Right Sidebar</li>
+			</a>
+			<a href="noside.html">
+				<li>No Sidebar</li>
+			</a>
+			<li>Submenu</li>
+			<div style="padding-left: 15px">
+				<li>Option 1</li>
+				<li>Option 2</li>
+				<li>Option 3</li>
+				<li>Option 4</li>
+			</div>
+			<a href="elements.html">
+				<li>Elements</li>
+			</a>
+		</ul>
+	</div>
+
+<!-- navigation menu pagewidth > 992px  -->
+	<nav class="navbar navbar-expand-lg navbar-light" id="scrollreact">
+		<div class="collapse navbar-collapse">
 			<a class="navbar-brand" href="index.html">
 				<b>HTML5 Website</b> by Hteml5webtemplates.co.uk
 			</a>
@@ -51,54 +85,58 @@
 		<div>
 			Faucibus neque adipiscing mi lorem semper blandit
 		</div>
-		<section class="side">
+		<section class="container row">
+			<!-- Main -->
+			<section class="col-main col-main-lg">
+				<div>
+					<a href="#" target="_self">
+						<img src="src/slide03.jpg" alt="">
+					</a>
+					<h3>Dolore Amet Consequat</h3>
+					Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam.
+					<h3>Sed Magna Ornare</h3>
+					In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus.
+					<ul>
+						<li>
+							Faucibus orci lobortis ac adipising integer.
+						</li>
+						<li>
+							Col accumsan arcu mi aliquet placerat.
+						</li>
+						<li>
+							Lobortis vestibulum ut megna tempor massa nascetur.
+						</li>
+						<li>
+							Lacinia mattis arcu nascetur lobortis
+						</li>
+					</ul>
+				</div>
+			</section>
 
 			<!-- Sidebar -->
-			<div>
-				<h3>Magna Feugiat</h3>
-				Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit..
-				<a href="#" target="_self">
-					<button>LEARN MORE</button>
-				</a>
-			</div>
-			<hr>
-			
-			<!-- Sidebar2 -->
-			<div>
-				<a href="#" target="_self">
-					<img src="src/pic03.jpg" alt="">
-				</a>
-				<h3>Amet Lorem Tempus</h3>
-				Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
-				<a href="#" target="_self">
-					<button>LEARN MORE</button>
-				</a>
-			</div>
-			
-			<!-- Main -->
-			<div>
-				<a href="#" target="_self">
-					<img src="src/slide03.jpg" alt="">
-				</a>
-				<h3>Dolore Amet Consequat</h3>
-				Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam.
-				<h3>Sed Magna Ornare</h3>
-				In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus.
-				<ul>
-					<li>
-						Faucibus orci lobortis ac adipising integer.
-					</li>
-					<li>
-						Col accumsan arcu mi aliquet placerat.
-					</li>
-					<li>
-						Lobortis vestibulum ut megna tempor massa nascetur.
-					</li>
-					<li>
-						Lacinia mattis arcu nascetur lobortis
-					</li>
-				</ul>
-			</div>
+			<section class="col-side col-side-lg">
+				<div>
+					<h3>Magna Feugiat</h3>
+					Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit..
+					<a href="#" target="_self">
+						<button>LEARN MORE</button>
+					</a>
+				</div>
+				<hr>
+				
+				<!-- Sidebar2 -->
+				<div>
+					<a href="#" target="_self">
+						<img src="src/pic03.jpg" alt="">
+					</a>
+					<h3>Amet Lorem Tempus</h3>
+					Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.
+					<a href="#" target="_self">
+						<button>LEARN MORE</button>
+					</a>
+				</div>
+			</section>
+
 		</section>
 	</article>
 
@@ -150,6 +188,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/nawhes.js"></script>
 
 </body>
 </html>
