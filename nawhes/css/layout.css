@@ -1,0 +1,171 @@
+
+* {
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	min-height: 100%
+}
+
+iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#logo{
+	height: 20px;
+}
+
+.header{
+	height: 30px;
+	background-color: #CDCFDC;
+}
+
+.header div {
+	display: inline-block;
+	padding: 5px;
+}
+
+#logo_wrap {
+	width: 80%;
+}
+
+#menu_wrap {
+	width: 20%;
+	text-align: right;
+}
+
+img{
+	max-width: 100%;
+}
+
+footer{
+	height: 20px;
+}
+
+.menu_dropdown {
+	display: none;
+	position: absolute;
+	background-color: white;
+}
+
+.menu:hover .menu_dropdown {
+	border-style: solid;
+	display: block;
+	right: 0;
+	z-index: 1;
+}
+
+.menu_dropdown>a {
+	display: block;
+}
+
+.frame{
+	background-color: rgba(255,217,194,0.2);
+	width: auto;
+	min-height: calc(100vh - 50px);
+}
+
+.col {
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-left-color: rgba(180,176,173,0.6);
+	height: 95vh;
+}
+
+.frame>.col{
+	float: left;
+	padding: 5px;
+}
+
+.frame>.col:first-child{
+	border-left-style: none;
+}
+
+.frame>.col>.FB{
+	background-color: rgba(199,227,220,0.2);
+	margin: 5px 0;
+	padding: 5px;
+}
+
+.frame::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.FB{
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+	display: grid;
+	grid-template-rows: 30px 190px 30px;
+}
+
+.temp_A{
+
+}
+
+#temp_B1{
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+#temp_B2{
+	display: grid;
+	grid-template-rows: 40% 60%;
+	color: white;
+	text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px  1px 0 #000, 1px  1px 0 #000;
+}
+
+#temp_B2 img{
+	opacity: 0.4;
+}
+
+#temp_B3{
+	overflow: hidden;
+}
+
+#temp_B4{
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+}
+
+.temp_C{
+	align-content: end;
+}
+
+.FB:hover {
+	border-style: solid;
+	height: auto;
+	grid-template-rows: 30px auto 30px;
+}
+
+
+.FB:hover>div[id*="temp"] {
+	display: block!important;
+	text-shadow: none!important;
+	color: black!important;
+}
+
+
+@media (min-width: 1000px) {
+	.frame>.col{
+		width: 33.33%;
+	}
+}
+
+@media (max-width: 998.98px){
+	.frame>.col{
+		width: 50%;
+	}
+}
