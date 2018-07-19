@@ -17,11 +17,13 @@ iframe{
 }
 
 #logo{
-	height: 20px;
+	position: relative;
+	height: -webkit-fill-available;
 }
 
 .header{
-	height: 30px;
+	min-height: 30px;
+	height: 5vh;
 	background-color: #CDCFDC;
 }
 
@@ -67,14 +69,13 @@ footer{
 .frame{
 	background-color: rgba(255,217,194,0.2);
 	width: auto;
-	min-height: calc(100vh - 50px);
+	min-height: calc(95vh-20px);
 }
 
 .col {
 	border-left-style: solid;
 	border-left-width: 2px;
 	border-left-color: rgba(180,176,173,0.6);
-	height: 95vh;
 }
 
 .frame>.col{
