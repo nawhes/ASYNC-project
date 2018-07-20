@@ -1,9 +1,11 @@
 
+
 * {
 	box-sizing: border-box;
 }
 
 body{
+	font-family: 'Sunflower', sans-serif;
 	margin: 0;
 	min-height: 100%
 }
@@ -30,32 +32,32 @@ img{
 	padding: 7px;
 }
 
+#cloudcontainer{
+	width: 60%;
+}
+
 .cloud {
-	z-index: 100;
 	width: 60px;
 	height: 3vh;
 	position: relative;
-	-webkit-animation: cloud1 10s infinite;
-	animation: cloud1 10s infinite;
+	-webkit-animation: cloud 15s ease-in-out infinite alternate;
+	animation: cloud 15s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes cloud1 {
-	from {left: 0%;}
-	to {left: 100%;}
+@-webkit-keyframes cloud {
+	from {left: -20%;}
+	to {left: 120%;}
 }
 
-@keyframes cloud1 {
-	from {left: 0%;}
-	to {left: 100%;}
+@keyframes cloud {
+	from {left: -20%;}
+	to {left: 120%;}
 }
 
 .header div {
 	display: inline-block;
 }
 
-.brand{
-	display: inline-block;
-}
 /*
 .brand::before {
 	content: "";
@@ -105,10 +107,12 @@ img{
 	display: block;
 }
 
+
 /* frame */
 
 .frame{
-	background-color: rgba(255,217,194,0.2);
+	/*background-color: rgba(255,217,194,0.2);*/
+	background: linear-gradient(180deg, rgba(102,201,255,1), rgba(255, 255, 255, 1));
 	display: flex;
 }
 
@@ -122,15 +126,11 @@ img{
 
 .frame>.col{
 	float: left;
-	padding: 5px;
+	padding: 0 5px;
 }
 
 .frame>.col:first-child{
 	border-left-style: none;
-}
-
-.frame>.col>.facebook{
-
 }
 
 .frame::after{
@@ -141,72 +141,24 @@ img{
 
 .feed {
 	width: 100%;
-/*	height: 300px;*/
+	/* height: 300px; */
 	margin: 10px 0;
-	/*padding: 5px;*/
+	/* padding: 5px; */
 	overflow: hidden;
 	display: grid;
 	grid-template-rows: 30px auto 30px;
 	background-color: white;
-	box-shadow: 0px 0px 5px;
+	box-shadow: 0px 0px 2px;
 }
 
-[class*="temp_A"]::before {
+
+.temp_A::before { /* favicon container */
 	content: "";
 	display: block;
 	width: 20px;
 	height: 20px;
 	float: left;
 	margin: 0 6px;
-}
-
-.facebook {
-	
-}
-
-.facebook>.temp_A{
-	color: white;
-	background-color: rgba(59,89,152,0.6);
-}
-.facebook>.temp_A::before {
-	background: url(facebook.png) no-repeat;
-}
-
-.Youtube>.temp_A {
-	color: white;
-	background-color: rgba(255,0,0,0.6);
-}
-
-.Youtube>.temp_A::before {
-	background: url(youtube.png) no-repeat;
-}
-
-.twitter>.temp_A {
-	color: white;
-	background-color: rgba(0,172,237,0.6);
-}
-
-.twitter>.temp_A::before {
-	background: url(twitter.png) no-repeat;
-}
-
-.tumblr>.temp_A {
-	color: white;
-	background-color: rgba(54,70,93,0.6);
-}
-
-.tumblr>.temp_A::before {
-	background: url(tumblr.png) no-repeat;
-}
-
-.instagram>.temp_A {
-	color: white;
-	background: linear-gradient(45deg, rgba(252,204,99,0.6), rgba(138, 58, 185, 0.6));
-	/*background-color: rgba(252,204,99,0.6);*/
-}
-
-.instagram>.temp_A::before {
-	background: url(instagram.png) no-repeat;
 }
 
 .temp_A {
@@ -225,6 +177,7 @@ img{
 #temp_B1{
 	display: grid;
 	grid-template-columns: 50% 50%;
+	grid-gap: 10px;
 }
 
 #temp_B2{
@@ -240,6 +193,7 @@ img{
 }
 
 #temp_B3{
+	padding: 5px;
 	overflow: hidden;
 }
 
@@ -254,8 +208,7 @@ img{
 }
 
 #temp_B5{
-	display: grid;
-	grid-column-end: 80px auto;
+	padding: 5px;
 }
 
 #temp_B5>p {
@@ -271,39 +224,9 @@ img{
 	border-radius: 0px;
 }
 
-.facebook>.temp_C{
-	color: white;
-	background-color: rgba(36,103,178,0.4);
-}
-
-.Youtube>.temp_C {
-	color: white;
-	background-color: rgba(255,0,0,0.4);
-}
-
-.twitter>.temp_C {
-	color: white;
-	background-color: rgba(0,172,237,0.4);
-}
-
 .temp_C {
 	padding: 5px;
 	align-content: end;
-}
-
-.like {
-	float: right;
-	display: inline-block;
-}
-
-.comment {
-	float: right;
-	display: inline-block;
-}
-
-.share {
-	float: right;
-	display: inline-block;
 }
 
 [class*="metadata"] {
@@ -311,19 +234,35 @@ img{
 	display: inline-block;
 }
 
-.youtubemetadata {
-	
+
+/*
+Instagram
+*/
+
+.instagram>.temp_A {
+	color: white;
+	background: linear-gradient(45deg, rgba(252,204,99,0.6), rgba(138, 58, 185, 0.6));
+	/*background-color: rgba(252,204,99,0.6);*/
 }
 
-.twittermetadata {
+.instagram>.temp_A::before {
+	background: url(instagram.png) no-repeat;
+}
+
+.instagram>.temp_C {
 
 }
 
-.tumblrmetadata {
+.instagrammetadata {
 
 }
 
-.like::before {
+.instagram .like {
+	float: right;
+	display: inline-block;
+}
+
+.instagram .like::before {
 	content: "";
 	display: block;
 	background: url(like.png) no-repeat;
@@ -333,7 +272,116 @@ img{
 	margin: 0 6px;
 }
 
-.comment::before {
+
+/*
+Twitter
+*/
+
+.twitter>.temp_A {
+	color: white;
+	background-color: rgba(0,172,237,0.6);
+}
+
+.twitter>.temp_A::before {
+	background: url(twitter.png) no-repeat;
+}
+
+.twitter>.temp_C {
+	color: white;
+	background-color: rgba(0,172,237,0.4);
+}
+
+.twittermetadata {
+
+}
+
+/*
+Twitch
+*/
+
+.twitch>.temp_A {
+	color: white;
+	background-color: rgba(100,65,165,0.6);
+}
+
+.twitch>.temp_A::before {
+	background: url(twitch.png) no-repeat;
+}
+
+.twitchmetadata {
+
+}
+
+
+/*
+Youtube
+*/
+
+.Youtube>.temp_A {
+	color: white;
+	background-color: rgba(255,0,0,0.6);
+}
+
+.Youtube>.temp_A::before {
+	background: url(youtube.png) no-repeat;
+}
+
+.Youtube>.temp_C {
+	color: white;
+	background-color: rgba(255,0,0,0.4);
+}
+
+.youtubemetadata {
+		
+}
+
+/*
+Facebook
+*/
+.facebook {
+	
+}
+
+.facebook>.temp_A{
+	color: white;
+	background-color: rgba(59,89,152,0.6);
+}
+.facebook>.temp_A::before {
+	background: url(facebook.png) no-repeat;
+}
+
+.facebook>.temp_C{
+	color: white;
+	background-color: rgba(36,103,178,0.4);
+}
+
+.facebookmetadata{
+
+}
+
+.facebook .like {
+	display: inline-block;
+}
+
+.facebook .comment {
+	display: inline-block;
+}
+
+.facebook .share {
+	display: inline-block;
+}
+
+.facebook .like::before {
+	content: "";
+	display: block;
+	background: url(like.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0 6px;
+}
+
+.facebook .comment::before {
 	content: "";
 	display: block;
 	background: url(comment.png) no-repeat;
@@ -343,7 +391,7 @@ img{
 	margin: 0 6px;
 }
 
-.share::before {
+.facebook .share::before {
 	content: "";
 	display: block;
 	background: url(share.png) no-repeat;
@@ -352,7 +400,6 @@ img{
 	float: left;
 	margin: 0 6px;
 }
-
 /*
 .facebook:hover {
 	border-style: solid;
@@ -368,9 +415,84 @@ img{
 }
 */
 
+/*
+Tumblr
+*/
+
+.tumblr>.temp_A {
+	color: white;
+	background-color: rgba(54,70,93,0.6);
+}
+
+.tumblr>.temp_A::before {
+	background: url(tumblr.png) no-repeat;
+}
+
+.tumblrmetadata {
+
+}
+
+.tumblr .note {
+	float: left;
+}
+
+.tumblr .share {
+	float: right;
+	display: inline-block;
+}
+
+.tumblr .reblog {
+	float: right;
+	display: inline-block;
+}
+
+.tumblr .like {
+	float: right;
+	display: inline-block;
+}
+
+.tumblr .share::before {
+	content: "";
+	display: block;
+	background: url(share.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0 6px;
+}
+
+.tumblr .reblog::before {
+	content: "";
+	display: block;
+	background: url(share.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0 6px;
+}
+
+.tumblr .like::before {
+	content: "";
+	display: block;
+	background: url(share.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0 6px;
+}
+
+
 /* footer */
 .footer{
+	text-align: center;
 	height: 20px;
+
+/*
+	color: white;
+	background-color: rgba(0, 0, 0, 1);
+*/
+	color: black;
+	background-color: rgba(255,255,255,1);
 }
 
 
