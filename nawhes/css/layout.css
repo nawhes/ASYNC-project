@@ -16,24 +16,66 @@ iframe{
 	height: 100%;
 }
 
-#logo{
-	position: relative;
-	height: -webkit-fill-available;
+img{
+	max-width: 100%;
+	border-radius: 5px;
 }
 
-.header{
+/* Header */
+
+.header {
 	min-height: 30px;
 	height: 5vh;
-	background-color: #CDCFDC;
+	background-color: rgb(102,201,255);
+	padding: 7px;
+}
+
+.cloud {
+	z-index: 100;
+	width: 60px;
+	height: 3vh;
+	position: relative;
+	-webkit-animation: cloud1 10s infinite;
+	animation: cloud1 10s infinite;
+}
+
+@-webkit-keyframes cloud1 {
+	from {left: 0%;}
+	to {left: 100%;}
+}
+
+@keyframes cloud1 {
+	from {left: 0%;}
+	to {left: 100%;}
 }
 
 .header div {
 	display: inline-block;
-	padding: 5px;
 }
 
+.brand{
+	display: inline-block;
+}
+/*
+.brand::before {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0 6px;
+	background: url(Logo_color.png) no-repeat;
+	z-index: 1300;
+}
+*/
+
 #logo_wrap {
-	width: 80%;
+	width: 20%;
+}
+
+#logo{
+	position: relative;
+	height: -webkit-fill-available;
 }
 
 #menu_wrap {
@@ -41,12 +83,9 @@ iframe{
 	text-align: right;
 }
 
-img{
-	max-width: 100%;
-}
-
-footer{
-	height: 20px;
+#menudraw {
+	position: relative;
+	height: -webkit-fill-available;
 }
 
 .menu_dropdown {
@@ -66,16 +105,19 @@ footer{
 	display: block;
 }
 
+/* frame */
+
 .frame{
 	background-color: rgba(255,217,194,0.2);
-	width: auto;
-	min-height: calc(95vh-20px);
+	display: flex;
 }
 
 .col {
+	flex: 1;
 	border-left-style: solid;
 	border-left-width: 2px;
 	border-left-color: rgba(180,176,173,0.6);
+	min-height: calc( 95vh - 20px );
 }
 
 .frame>.col{
@@ -87,10 +129,8 @@ footer{
 	border-left-style: none;
 }
 
-.frame>.col>.FB{
-	background-color: rgba(199,227,220,0.2);
-	margin: 5px 0;
-	padding: 5px;
+.frame>.col>.facebook{
+
 }
 
 .frame::after{
@@ -99,16 +139,87 @@ footer{
 	display: table;
 }
 
-.FB{
+.feed {
 	width: 100%;
-	height: 250px;
+/*	height: 300px;*/
+	margin: 10px 0;
+	/*padding: 5px;*/
 	overflow: hidden;
 	display: grid;
-	grid-template-rows: 30px 190px 30px;
+	grid-template-rows: 30px auto 30px;
+	background-color: white;
+	box-shadow: 0px 0px 5px;
 }
 
-.temp_A{
+[class*="temp_A"]::before {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0 6px;
+}
 
+.facebook {
+	
+}
+
+.facebook>.temp_A{
+	color: white;
+	background-color: rgba(59,89,152,0.6);
+}
+.facebook>.temp_A::before {
+	background: url(facebook.png) no-repeat;
+}
+
+.Youtube>.temp_A {
+	color: white;
+	background-color: rgba(255,0,0,0.6);
+}
+
+.Youtube>.temp_A::before {
+	background: url(youtube.png) no-repeat;
+}
+
+.twitter>.temp_A {
+	color: white;
+	background-color: rgba(0,172,237,0.6);
+}
+
+.twitter>.temp_A::before {
+	background: url(twitter.png) no-repeat;
+}
+
+.tumblr>.temp_A {
+	color: white;
+	background-color: rgba(54,70,93,0.6);
+}
+
+.tumblr>.temp_A::before {
+	background: url(tumblr.png) no-repeat;
+}
+
+.instagram>.temp_A {
+	color: white;
+	background: linear-gradient(45deg, rgba(252,204,99,0.6), rgba(138, 58, 185, 0.6));
+	/*background-color: rgba(252,204,99,0.6);*/
+}
+
+.instagram>.temp_A::before {
+	background: url(instagram.png) no-repeat;
+}
+
+.temp_A {
+	padding: 5px;
+}
+
+[id="temp_B1"], [id="temp_B3"], [id="temp_B4"] {
+	padding: 5px;
+}
+
+[id*="temp"] {
+	overflow: hidden;
+	max-height: 240px;
 }
 
 #temp_B1{
@@ -118,9 +229,10 @@ footer{
 
 #temp_B2{
 	display: grid;
-	grid-template-rows: 40% 60%;
-	color: white;
-	text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px  1px 0 #000, 1px  1px 0 #000;
+	grid-template-rows: 80px 80px;
+	color: black;
+	overflow: hidden;
+	/*text-shadow:-2px -2px 3px #ffffff, 2px -2px 3px #ffffff, -2px  2px 3px #ffffff, 2px  2px 3px #ffffff;*/
 }
 
 #temp_B2 img{
@@ -141,21 +253,124 @@ footer{
 	padding-bottom: 56.25%;
 }
 
-.temp_C{
+#temp_B5{
+	display: grid;
+	grid-column-end: 80px auto;
+}
+
+#temp_B5>p {
+	padding-left: 5px;
+	text-decoration: underline rgb(0,172,237) wavy;
+}
+
+#temp_B6 {
+
+}
+
+#temp_B6>img {
+	border-radius: 0px;
+}
+
+.facebook>.temp_C{
+	color: white;
+	background-color: rgba(36,103,178,0.4);
+}
+
+.Youtube>.temp_C {
+	color: white;
+	background-color: rgba(255,0,0,0.4);
+}
+
+.twitter>.temp_C {
+	color: white;
+	background-color: rgba(0,172,237,0.4);
+}
+
+.temp_C {
+	padding: 5px;
 	align-content: end;
 }
 
-.FB:hover {
+.like {
+	float: right;
+	display: inline-block;
+}
+
+.comment {
+	float: right;
+	display: inline-block;
+}
+
+.share {
+	float: right;
+	display: inline-block;
+}
+
+[class*="metadata"] {
+	float: right;
+	display: inline-block;
+}
+
+.youtubemetadata {
+	
+}
+
+.twittermetadata {
+
+}
+
+.tumblrmetadata {
+
+}
+
+.like::before {
+	content: "";
+	display: block;
+	background: url(like.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0 6px;
+}
+
+.comment::before {
+	content: "";
+	display: block;
+	background: url(comment.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0 6px;
+}
+
+.share::before {
+	content: "";
+	display: block;
+	background: url(share.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 0 6px;
+}
+
+/*
+.facebook:hover {
 	border-style: solid;
 	height: auto;
 	grid-template-rows: 30px auto 30px;
 }
 
 
-.FB:hover>div[id*="temp"] {
+.facebook:hover>div[id*="temp"] {
 	display: block!important;
 	text-shadow: none!important;
 	color: black!important;
+}
+*/
+
+/* footer */
+.footer{
+	height: 20px;
 }
 
 
