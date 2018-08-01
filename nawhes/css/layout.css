@@ -142,7 +142,7 @@ img{
 	position: absolute;
 	right: 5px;
 	top: 5px;
-	background: url(expand.png) no-repeat;
+	background: url(../src/expand.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	margin: 0 6px;
@@ -281,7 +281,7 @@ Instagram
 }
 
 .instagram>.temp_A::before {
-	background: url(instagram.png) no-repeat;
+	background: url(../src/instagram.png) no-repeat;
 }
 
 .instagram>.temp_C {
@@ -300,7 +300,7 @@ Instagram
 .instagram .like::before {
 	content: "";
 	display: block;
-	background: url(instagramlike.png) no-repeat;
+	background: url(../src/instagramlike.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -318,7 +318,7 @@ Twitter
 }
 
 .twitter>.temp_A::before {
-	background: url(twitter.png) no-repeat;
+	background: url(../src/twitter.png) no-repeat;
 }
 
 .twitter>.temp_C {
@@ -340,7 +340,7 @@ Twitch
 }
 
 .twitch>.temp_A::before {
-	background: url(twitch.png) no-repeat;
+	background: url(../src/twitch.png) no-repeat;
 }
 
 .twitchmetadata {
@@ -358,7 +358,7 @@ Youtube
 }
 
 .Youtube>.temp_A::before {
-	background: url(youtube.png) no-repeat;
+	background: url(../src/youtube.png) no-repeat;
 }
 
 .Youtube>.temp_C {
@@ -382,7 +382,7 @@ Facebook
 	background-color: rgba(59,89,152,0.6);
 }
 .facebook>.temp_A::before {
-	background: url(facebook.png) no-repeat;
+	background: url(../src/facebook.png) no-repeat;
 }
 
 .facebook>.temp_C{
@@ -409,7 +409,7 @@ Facebook
 .facebook .like::before {
 	content: "";
 	display: block;
-	background: url(facebooklike.png) no-repeat;
+	background: url(../src/facebooklike.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -419,7 +419,7 @@ Facebook
 .facebook .comment::before {
 	content: "";
 	display: block;
-	background: url(facebookcomment.png) no-repeat;
+	background: url(../src/facebookcomment.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -429,7 +429,7 @@ Facebook
 .facebook .share::before {
 	content: "";
 	display: block;
-	background: url(facebookshare.png) no-repeat;
+	background: url(../src/facebookshare.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -460,7 +460,7 @@ Tumblr
 }
 
 .tumblr>.temp_A::before {
-	background: url(tumblr.png) no-repeat;
+	background: url(../src/tumblr.png) no-repeat;
 }
 
 .tumblrmetadata {
@@ -489,7 +489,7 @@ Tumblr
 .tumblr .share::before {
 	content: "";
 	display: block;
-	background: url(tumblrshare.png) no-repeat;
+	background: url(../src/tumblrshare.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -499,7 +499,7 @@ Tumblr
 .tumblr .reblog::before {
 	content: "";
 	display: block;
-	background: url(tumblrshare.png) no-repeat;
+	background: url(../src/tumblrshare.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -509,7 +509,7 @@ Tumblr
 .tumblr .like::before {
 	content: "";
 	display: block;
-	background: url(tumblrshare.png) no-repeat;
+	background: url(../src/tumblrshare.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	float: left;
