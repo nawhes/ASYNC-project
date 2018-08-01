@@ -191,7 +191,8 @@ img{
 }
 
 .showArticle .B1_text {
-	padding-left: 10px;
+
+	padding: 10px;
 	height: 100%;
 	overflow: auto;
 }
