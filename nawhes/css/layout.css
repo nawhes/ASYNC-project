@@ -19,14 +19,14 @@ iframe{
 
 img{
 	max-width: 100%;
-	border-radius: 5px;
+/*	border-radius: 5px;*/
 }
 
 /* Header */
 
 .header {
 	min-height: 30px;
-	height: 5vh;
+/*	height: 5vh;*/
 	background-color: rgb(102,201,255);
 	padding: 7px;
 }
@@ -38,6 +38,7 @@ img{
 .cloud {
 	width: 60px;
 	height: 3vh;
+	min-height: 30px;
 	position: relative;
 	-webkit-animation: cloud 15s ease-in-out infinite alternate;
 	animation: cloud 15s ease-in-out infinite alternate;
@@ -76,7 +77,8 @@ img{
 
 #logo{
 	position: relative;
-	height: -webkit-fill-available;
+	height: 5vh;
+	min-height: 30px;
 }
 
 #menu_wrap {
@@ -86,7 +88,8 @@ img{
 
 #menudraw {
 	position: relative;
-	height: -webkit-fill-available;
+	height: 5vh;
+	min-height: 30px;
 }
 
 .menu_dropdown {
@@ -112,24 +115,8 @@ img{
 .frame{
 	/*background-color: rgba(255,217,194,0.2);*/
 	background: linear-gradient(180deg, rgba(102,201,255,1), rgba(255, 255, 255, 1));
-	/*display: flex;*/
-}
+	display: grid;
 
-.col {
-	flex: 1;
-	border-left-style: solid;
-	border-left-width: 2px;
-	border-left-color: rgba(180,176,173,0.6);
-	min-height: calc( 95vh - 20px );
-}
-
-.frame>.col{
-	float: left;
-	padding: 0 5px;
-}
-
-.frame>.col:first-child{
-	border-left-style: none;
 }
 
 .frame::after{
@@ -139,10 +126,8 @@ img{
 }
 
 .feed {
-	width: 100%;
-	/* height: 300px; */
-	margin: 10px 0;
-	/* padding: 5px; */
+	margin: 5px;
+	position: relative;
 	overflow: hidden;
 	display: grid;
 	grid-template-rows: 30px auto 30px;
@@ -150,6 +135,16 @@ img{
 	box-shadow: 0px 0px 2px;
 }
 
+.feed::after {
+	content: "";
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	background: url(expand.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	margin: 0 6px;
+}
 
 .temp_A::before { /* favicon container */
 	content: "";
@@ -164,40 +159,76 @@ img{
 	padding: 5px;
 }
 
-[id="temp_B1"], [id="temp_B3"], [id="temp_B4"] {
-	padding: 5px;
-}
-
 [id*="temp"] {
 	overflow: hidden;
-	max-height: 240px;
+}
+/* Text with Pic */
+#temp_B1 {
+	
 }
 
-#temp_B1{
-	display: grid;
-	grid-template-columns: 50% 50%;
-	grid-gap: 10px;
+.showArticle .B1_pic {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+	background-color: rgba(22, 22, 22, 0.7);
 }
 
-#temp_B2{
-	display: grid;
-	grid-template-rows: 80px 80px;
-	color: black;
-	overflow: hidden;
-	/*text-shadow:-2px -2px 3px #ffffff, 2px -2px 3px #ffffff, -2px  2px 3px #ffffff, 2px  2px 3px #ffffff;*/
+.showArticle .B1_pic img {
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
-#temp_B2 img{
-	opacity: 0.4;
+.showArticle .B1_text {
+	padding-left: 10px;
+	height: 100%;
+	overflow: auto;
 }
 
+/* Single Text or Single Pic with caption */
 #temp_B3{
-	padding: 5px;
-	overflow: hidden;
+	position: relative;
 }
 
+.showArticle .B3_pic {
+	position: relative;
+	background-color: rgba(22, 22, 22, 0.7);
+	width: auto;
+	height: 100%;
+}
+
+.showArticle .B3_pic img {
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.showArticle .B3_text {
+	position: absolute;
+	top: 0;
+	right: 5px;
+	color: white;
+}
+
+/* iframe or vedio platform */
 #temp_B4{
-	overflow: hidden;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -206,21 +237,9 @@ img{
 	padding-bottom: 56.25%;
 }
 
-#temp_B5{
-	padding: 5px;
-}
-
-#temp_B5>p {
+[class*="twitter"] p {
 	padding-left: 5px;
 	text-decoration: underline rgb(0,172,237) wavy;
-}
-
-#temp_B6 {
-
-}
-
-#temp_B6>img {
-	border-radius: 0px;
 }
 
 .temp_C {
@@ -264,7 +283,7 @@ Instagram
 .instagram .like::before {
 	content: "";
 	display: block;
-	background: url(like.png) no-repeat;
+	background: url(instagramlike.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -373,7 +392,7 @@ Facebook
 .facebook .like::before {
 	content: "";
 	display: block;
-	background: url(like.png) no-repeat;
+	background: url(facebooklike.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -383,7 +402,7 @@ Facebook
 .facebook .comment::before {
 	content: "";
 	display: block;
-	background: url(comment.png) no-repeat;
+	background: url(facebookcomment.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -393,7 +412,7 @@ Facebook
 .facebook .share::before {
 	content: "";
 	display: block;
-	background: url(share.png) no-repeat;
+	background: url(facebookshare.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -453,7 +472,7 @@ Tumblr
 .tumblr .share::before {
 	content: "";
 	display: block;
-	background: url(share.png) no-repeat;
+	background: url(tumblrshare.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -463,7 +482,7 @@ Tumblr
 .tumblr .reblog::before {
 	content: "";
 	display: block;
-	background: url(share.png) no-repeat;
+	background: url(tumblrshare.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -473,7 +492,7 @@ Tumblr
 .tumblr .like::before {
 	content: "";
 	display: block;
-	background: url(share.png) no-repeat;
+	background: url(tumblrshare.png) no-repeat;
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -495,62 +514,25 @@ Tumblr
 }
 
 
-#demo03{
-	position: absolute;
-	color: white;
-	padding: 5px;
-}
-
-#demotop {
-	text-decoration-style: solid;
-	text-decoration-color: white;
-	text-decoration-line: underline;
-	font-size: 3rem;
-}
-
-#demobottom {
-
-}
-
-#demodemo {
-	position: relative;
-	height: 50px;
-	background-color: black;
-	margin: 5px;
-	padding: 10px;
-	font-size: 2em;
-	letter-spacing: 1px;
-	font-stretch: expanded;
-	color: white;
-	overflow: hidden;
-}
-
-#demodemo #demoanimation {
-	position: absolute;
-	-webkit-animation: demoani 10s;
-	animation: demoani 10s;
-}
-
-@keyframes demoani {
-	from {transform: translateX(250%);}
-	to {transform: translateX(0%);}
-}
-
-@-webkit-keyframes demoani {
-	from {transform: translateX(250%);}
-	to {transform: translateX(0%);}
-}
-
-
-
 @media (min-width: 1000px) {
-	.frame>.col{
-		width: 33.33%;
+	.frame {
+		grid-template-columns: 25% 25% 25% 25%;
+		grid-auto-rows: calc(14vw + 60px);
 	}
 }
 
 @media (max-width: 998.98px){
-	.frame>.col{
-		width: 50%;
+	.frame {
+		grid-template-columns: 33.3% 33.3% 33.3%;
+		grid-auto-rows: calc(18.7vw + 60px);
 	}
+}
+
+.showArticle {
+	grid-area: auto / auto / span 2 / span 2;
+
+}
+
+.showArticle [id*="temp"] {
+
 }
