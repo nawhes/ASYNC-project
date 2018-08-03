@@ -10,25 +10,29 @@
 	<title></title>
 </head>
 <body>
-	<header class="header">
+	<header id="header">
 		<div id="logo_wrap">
-			<a href="#"><img src="src/logo_color.png" alt="" id="logo"></a>
-		</div><div id="cloudcontainer"><div class="cloud"><img src="src/27-cloud-png-image.png" alt=""></div></div><div id="menu_wrap">
-			<section class="menu">
-				<img src="src/Hamburger_icon.svg.png" alt="" id="menudraw">
-				<section class="menu_dropdown">
+			<a href="#" id="logo"></a>
+		</div>
+		<div id="cloudcontainer">
+			<div id="cloud">
+			</div>
+		</div>
+		<div id="menu_wrap">
+			<div id="menu">
+				<section id="menu_dropdown">
 					<a href="#">Login</a>
 					<a href="#">Review</a>
 					<a href="#">Edit</a>
 				</section>
-			</section>
+			</div>
 		</div>
 	</header>
 
 	<div class="frame">
 		<article class="feed facebook">
-			<div class="temp_A">Sangmyung Official!</div>
-			<div id="temp_B1">
+			<div class="feedhead">Sangmyung Official!</div>
+			<div class="temp_B1 feedbody">
 				<div class="B1_pic">
 					<img src="src/abc.png" alt="">
 				</div>
@@ -50,7 +54,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="temp_C">
+			<div class="feedfooter">
 				<div class="facebookmetadata">
 					<div class="like">
 						100
@@ -66,12 +70,14 @@
 		</article>
 		
 		<article class="feed twitter">
-			<div class="temp_A">Chef. Chen</div>
-			<div id="temp_B2">
-				<p>Official</p>
-				<span>I had Five Guys Hamburger :) ^_^</span>
+			<div class="feedhead">Chef. Chen</div>
+			<div class="temp_B2 feedbody">
+				<div class="B2_text">
+					<p>Official</p>
+					<span>I had Five Guys Hamburger :) ^_^</span>
+				</div>
 			</div>
-			<div class="temp_C">
+			<div class="feedfooter">
 				<div class="twittermetadata">
 					RT : 1.2k
 				</div>
@@ -79,8 +85,8 @@
 		</article>
 		
 		<article class="feed facebook">
-			<div class="temp_A">Sangmyung Festival Team</div>
-			<div id="temp_B1">
+			<div class="feedhead">Sangmyung Festival Team</div>
+			<div class="temp_B1 feedbody">
 				<div class="B1_pic">
 					<img src="src/abc.png" alt="">					
 				</div>
@@ -105,7 +111,7 @@
 				</div>
 
 			</div>
-			<div class="temp_C">
+			<div class="feedfooter">
 				<div class="facebookmetadata">
 					<div class="like">
 						100
@@ -121,20 +127,20 @@
 		</article>
 
 		<article class="feed Youtube">
-			<div class="temp_A">KSL GROUP DRAW</div>
-			<div id="temp_B4">
+			<div class="feedhead">KSL GROUP DRAW</div>
+			<div class="temp_B4 feedbody">
 				<iframe src="https://www.youtube.com/embed/M1SbUDGZdiY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</div>
-			<div class="temp_C">
+			<div class="feedfooter">
 				<div class="youtubemetadata">
 					Publisher : nawhes &nbsp 9.3kview &nbsp 2Weeks ago
 				</div>
 			</div>
 		</article>
 		
-		<article class="feed facebook">
-			<div class="temp_A">Park added a comments.</div>
-			<div id="temp_B1">
+		<article class="feed facebook" id="tiktok">
+			<div class="feedhead">Park added a comments.</div>
+			<div class="temp_B1 feedbody">
 				<div class="B1_pic">
 					<img src="src/2017062212392915633.jpg" alt="">
 				</div>
@@ -157,7 +163,7 @@
 				</div>
 
 			</div>
-			<div class="temp_C">
+			<div class="feedfooter">
 				<div class="facebookmetadata">
 					<div class="like">
 						100
@@ -173,13 +179,13 @@
 		</article>
 		
 		<article class="feed twitch">
-			<div class="temp_A">"Streamers" is streaming</div>
-			<div id="temp_B4">
-<!-- 
+			<div class="feedhead">"Streamers" is streaming</div>
+			<div class="temp_B4 feedbody">
+
 				<iframe src="https://player.twitch.tv/?channel=godbokihs" frameborder="0" allowfullscreen="true" scrolling="no"></iframe><a href="https://www.twitch.tv/godbokihs?tt_content=text_link&tt_medium=live_embed" style="display:block; font-weight:normal; font-size:10px; text-decoration:underline;">www.twitch.tv에서 갓보기의 생방송을 시청하세요</a>
-				 -->
+				
 			</div>
-			<div class="temp_C">
+			<div class="feedfooter">
 				<div class="twitchmetadata">
 					Streaming now!
 				</div>
@@ -187,8 +193,8 @@
 		</article>
 
 		<article class="feed tumblr">
-			<div class="temp_A">Drake's article</div>
-			<div id="temp_B3">
+			<div class="feedhead">Drake's article</div>
+			<div class="temp_B3 feedbody">
 				<div class="B3_pic">
 					<img src="src/abc.png" alt="">
 				</div>
@@ -197,7 +203,7 @@
 					Stay with me
 				</div>
 			</div>
-			<div class="temp_C">
+			<div class="feedfooter">
 				<div class="note">
 					2,045 notes
 				</div>
@@ -212,10 +218,10 @@
 		</article>
 		
 		<article class="feed facebook">
-			<div class="temp_A">CSS Tricks</div>
-			<div id="temp_B2">
+			<div class="feedhead">CSS Tricks</div>
+			<div class="temp_B2 feedbody">
 				<div class="B2_text">
-					As you know, :hover behavior doesn’t exist on touch screen devices. So when you design a responsive website, you should carefully plan when and where to use :hover interactions. Simple links that open some URL will loose their :hover effect on some touch screen devices. On iOS :hover is triggered before the click event, so you will see the hover style for a brief moment before the page changes. Those are minor things, they don’t affect the functionality of the site. The real problem is a :hover  that either hides or shows another element using display or visibility CSS properties. This type of :hover will transform into the double tap behavior on iOS touch screens.
+					As you know, :hover behavior doesn’t exist on touch screen devices. So when you design a responsive website, you should carefully plan when and where to use :hover interactions.<!--  Simple links that open some URL will loose their :hover effect on some touch screen devices. On iOS :hover is triggered before the click event, so you will see the hover style for a brief moment before the page changes. Those are minor things, they don’t affect the functionality of the site. The real problem is a :hover  that either hides or shows another element using display or visibility CSS properties. This type of :hover will transform into the double tap behavior on iOS touch screens. -->
 				</div>
 				<hr />
 				<div class="comment">
@@ -231,7 +237,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="temp_C">
+			<div class="feedfooter">
 				<div class="facebookmetadata">
 					<div class="like">
 						100
@@ -247,8 +253,8 @@
 		</article>
 		
 		<article class="feed instagram">
-			<div class="temp_A">nawhes330</div>
-			<div id="temp_B3">
+			<div class="feedhead">nawhes330</div>
+			<div class="temp_B3 feedbody">
 				<div class="B3_pic">
 					<img src="src/abc.png" alt="">	
 				</div>
@@ -256,7 +262,7 @@
 					I wish to join Sangmyung Festival
 				</div>
 			</div>
-			<div class="temp_C">
+			<div class="feedfooter">
 				<div class="instagrammetadata">
 					#travel, #YOLO
 					<div class="like">9.2k</div>
@@ -265,13 +271,13 @@
 		</article>
 
 		<article class="feed tumblr">
-			<div class="temp_A">Drake's article</div>
-			<div id="temp_B3">
+			<div class="feedhead">Drake's article</div>
+			<div class="temp_B3 feedbody">
 				<div class="B3_pic">
 					<img src="src/abc.png" alt="">
 				</div>
 			</div>
-			<div class="temp_C">
+			<div class="feedfooter">
 				<div class="note">
 					2,045 notes
 				</div>
@@ -286,8 +292,8 @@
 		</article>
 		
 		<article class="feed facebook">
-			<div class="temp_A">CSS Tricks</div>
-			<div id="temp_B2">
+			<div class="feedhead">CSS Tricks</div>
+			<div class="temp_B2 feedbody">
 				<div class="B2_text">
 					As you know, :hover behavior doesn’t exist on touch screen devices. So when you design a responsive website, you should carefully plan when and where to use :hover interactions. Simple links that open some URL will loose their :hover effect on some touch screen devices. On iOS :hover is triggered before the click event, so you will see the hover style for a brief moment before the page changes. Those are minor things, they don’t affect the functionality of the site. The real problem is a :hover  that either hides or shows another element using display or visibility CSS properties. This type of :hover will transform into the double tap behavior on iOS touch screens.
 				</div>
@@ -305,7 +311,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="temp_C">
+			<div class="feedfooter">
 				<div class="facebookmetadata">
 					<div class="like">
 						100
@@ -321,13 +327,13 @@
 		</article>
 		
 		<article class="feed instagram">
-			<div class="temp_A">nawhes330</div>
-			<div id="temp_B3">
+			<div class="feedhead">nawhes330</div>
+			<div class="temp_B3 feedbody">
 				<div class="B3_pic">
 					<img src="src/abc.png" alt="">
 				</div>
 			</div>
-			<div class="temp_C">
+			<div class="feedfooter">
 				<div class="instagrammetadata">
 					#travel, #YOLO
 					<div class="like">9.2k</div>

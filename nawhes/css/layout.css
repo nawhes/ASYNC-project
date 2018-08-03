@@ -24,90 +24,96 @@ img{
 
 /* Header */
 
-.header {
+#header {
+	display: block;
+	position: relative;
 	min-height: 30px;
-/*	height: 5vh;*/
 	background-color: rgb(102,201,255);
-	padding: 7px;
+	padding: 0.5rem;
 }
 
-#cloudcontainer{
-	width: 60%;
+#header::after{
+	content: "";
+	clear: both;
+	display: table;
 }
 
-.cloud {
+#logo_wrap {
+	display: inherit;
+	float: left;
+	width: 10%;
+}
+
+#logo{
+	display: inherit;
+	position: relative;
+	background: url(../src/logo_color.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 3vh;
+	min-height: 30px;
+}
+
+#cloudcontainer {
+	display: inherit;
+	float: left;
+	width: 80%;
+}
+
+#cloud {
 	width: 60px;
 	height: 3vh;
 	min-height: 30px;
 	position: relative;
+	background: url(../src/27-cloud-png-image.png);
+	background-repeat: no-repeat;
+	background-size: contain;
 	-webkit-animation: cloud 15s ease-in-out infinite alternate;
 	animation: cloud 15s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes cloud {
-	from {left: -20%;}
-	to {left: 120%;}
+	from {left: 0%;}
+	to {left: calc(100% - 60px);}
 }
 
 @keyframes cloud {
-	from {left: -20%;}
-	to {left: 120%;}
-}
-
-.header div {
-	display: inline-block;
-}
-
-/*
-.brand::before {
-	content: "";
-	display: block;
-	width: 20px;
-	height: 20px;
-	float: left;
-	margin: 0 6px;
-	background: url(Logo_color.png) no-repeat;
-	z-index: 1300;
-}
-*/
-
-#logo_wrap {
-	width: 20%;
-}
-
-#logo{
-	position: relative;
-	height: 5vh;
-	min-height: 30px;
+	from {left: 0%;}
+	to {left: calc(100% - 60px);}
 }
 
 #menu_wrap {
-	width: 20%;
+	display: inherit;
+	float: left;
+	width: 10%;
 	text-align: right;
 }
 
-#menudraw {
+#menu {
 	position: relative;
-	height: 5vh;
+	height: 3vh;
 	min-height: 30px;
+	background: url(../src/240px-Symbol_rain_64.svg.png);
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
-.menu_dropdown {
+#menu_dropdown {
 	display: none;
 	position: absolute;
 	background-color: white;
-	padding: 20px;
+	padding: 1rem;
 	line-height: 150%;
 }
 
-.menu:hover .menu_dropdown {
+#menu:hover #menu_dropdown {
 	border-style: solid;
 	display: block;
 	right: 0;
 	z-index: 1;
 }
 
-.menu_dropdown>a {
+#menu_dropdown>a {
 	display: block;
 }
 
@@ -115,7 +121,6 @@ img{
 /* frame */
 
 .frame{
-	/*background-color: rgba(255,217,194,0.2);*/
 	background: linear-gradient(180deg, rgba(102,201,255,1), rgba(255, 255, 255, 1));
 	display: grid;
 
@@ -128,44 +133,47 @@ img{
 }
 
 .feed {
-	margin: 5px;
+	margin: 0.3rem;
 	position: relative;
 	overflow: hidden;
 	display: grid;
-	grid-template-rows: 30px auto 30px;
+	grid-template-rows: 1.7rem auto 1.7rem;
 	background-color: white;
-	box-shadow: 0px 0px 2px;
+	box-shadow: 0 0 0.1rem;
 }
 
-.feed::after {
+.expand::after {
 	content: "";
 	position: absolute;
-	right: 5px;
-	top: 5px;
-	background: url(../src/expand.png) no-repeat;
-	width: 20px;
-	height: 20px;
-	margin: 0 6px;
+	right: 0.2rem;
+	top: 0.2rem;
+	background: url(../src/expand.png);
+	background-repeat: no-repeat;
+	width: 1.2rem;
+	height: 1.2rem;
+	margin: 0 0.5rem;
 }
 
-.temp_A::before { /* favicon container */
+.feedhead::before { /* favicon container */
 	content: "";
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 2rem;
+	height: 2rem;
 	float: left;
-	margin: 0 6px;
+	margin: 0 0.5rem;
 }
 
-.temp_A {
-	padding: 5px;
+.feedhead {
+	height: 1.7rem;
+	padding: 0.3rem;
 }
 
-[id*="temp"] {
+.feedbody {
 	overflow: hidden;
 }
+
 /* Text with Pic */
-#temp_B1 {
+.temp_B1 {
 	
 }
 
@@ -191,15 +199,14 @@ img{
 }
 
 .showArticle .B1_text {
-
 	padding: 10px;
 	height: 100%;
 	overflow: auto;
 }
 
 /* Single text */
-#temp_B2 {
-	padding: 20px;
+.temp_B2 {
+	padding: 1rem;
 	line-height: 150%;
 
 }
@@ -209,7 +216,7 @@ img{
 }
 
 /* Single Pic with caption */
-#temp_B3{
+.temp_B3{
 	position: relative;
 }
 
@@ -236,13 +243,13 @@ img{
 
 .showArticle .B3_text {
 	position: absolute;
-	top: 0;
-	right: 5px;
+	top: 0.4rem;
+	right: 0.4rem;
 	color: white;
 }
 
 /* iframe or vedio platform */
-#temp_B4{
+.temp_B4{
 	position: relative;
 	top: 0;
 	left: 0;
@@ -252,7 +259,7 @@ img{
 }
 
 [class*="twitter"] p {
-	padding-left: 5px;
+	padding-left: 0.4rem;
 	text-decoration: underline rgb(0,172,237) wavy;
 }
 
@@ -260,8 +267,9 @@ img{
 	display: none;
 }
 
-.temp_C {
-	padding: 5px;
+.feedfooter {
+	height: 1.8rem;
+	padding: 0.4rem;
 	align-content: end;
 }
 
@@ -275,17 +283,17 @@ img{
 Instagram
 */
 
-.instagram>.temp_A {
+.instagram>.feedhead {
 	color: white;
 	background: linear-gradient(45deg, rgba(252,204,99,0.6), rgba(138, 58, 185, 0.6));
-	/*background-color: rgba(252,204,99,0.6);*/
 }
 
-.instagram>.temp_A::before {
-	background: url(../src/instagram.png) no-repeat;
+.instagram>.feedhead::before {
+	background: url(../src/instagram.png);
+	background-repeat: no-repeat;
 }
 
-.instagram>.temp_C {
+.instagram>.feedfooter {
 
 }
 
@@ -301,11 +309,12 @@ Instagram
 .instagram .like::before {
 	content: "";
 	display: block;
-	background: url(../src/instagramlike.png) no-repeat;
-	width: 20px;
-	height: 20px;
+	background: url(../src/instagramlike.png);
+	background-repeat: no-repeat;
+	width: 1.2rem;
+	height: 1.2rem;
 	float: left;
-	margin: 0 6px;
+	margin: 0 0.2rem;
 }
 
 
@@ -313,16 +322,17 @@ Instagram
 Twitter
 */
 
-.twitter>.temp_A {
+.twitter>.feedhead {
 	color: white;
 	background-color: rgba(0,172,237,0.6);
 }
 
-.twitter>.temp_A::before {
-	background: url(../src/twitter.png) no-repeat;
+.twitter>.feedhead::before {
+	background: url(../src/twitter.png);
+	background-repeat: no-repeat;
 }
 
-.twitter>.temp_C {
+.twitter>.feedfooter {
 	color: white;
 	background-color: rgba(0,172,237,0.4);
 }
@@ -335,13 +345,14 @@ Twitter
 Twitch
 */
 
-.twitch>.temp_A {
+.twitch>.feedhead {
 	color: white;
 	background-color: rgba(100,65,165,0.6);
 }
 
-.twitch>.temp_A::before {
-	background: url(../src/twitch.png) no-repeat;
+.twitch>.feedhead::before {
+	background: url(../src/twitch.png);
+	background-repeat: no-repeat;
 }
 
 .twitchmetadata {
@@ -353,16 +364,16 @@ Twitch
 Youtube
 */
 
-.Youtube>.temp_A {
+.Youtube>.feedhead {
 	color: white;
 	background-color: rgba(255,0,0,0.6);
 }
 
-.Youtube>.temp_A::before {
+.Youtube>.feedhead::before {
 	background: url(../src/youtube.png) no-repeat;
 }
 
-.Youtube>.temp_C {
+.Youtube>.feedfooter {
 	color: white;
 	background-color: rgba(255,0,0,0.4);
 }
@@ -378,15 +389,15 @@ Facebook
 	
 }
 
-.facebook>.temp_A{
+.facebook>.feedhead{
 	color: white;
 	background-color: rgba(59,89,152,0.6);
 }
-.facebook>.temp_A::before {
+.facebook>.feedhead::before {
 	background: url(../src/facebook.png) no-repeat;
 }
 
-.facebook>.temp_C{
+.facebook>.feedfooter{
 	color: white;
 	background-color: rgba(36,103,178,0.4);
 }
@@ -410,58 +421,48 @@ Facebook
 .facebook .like::before {
 	content: "";
 	display: block;
-	background: url(../src/facebooklike.png) no-repeat;
-	width: 20px;
-	height: 20px;
+	background: url(../src/facebooklike.png);
+	background-repeat: no-repeat;
+	width: 1.2rem;
+	height: 1.2rem;
 	float: left;
-	margin: 0 6px;
+	margin: 0 0.2rem;
 }
 
 .facebook .comment::before {
 	content: "";
 	display: block;
-	background: url(../src/facebookcomment.png) no-repeat;
-	width: 20px;
-	height: 20px;
+	background: url(../src/facebookcomment.png);
+	background-repeat: no-repeat;
+	width: 1.2rem;
+	height: 1.2rem;
 	float: left;
-	margin: 0 6px;
+	margin: 0 0.2rem;
 }
 
 .facebook .share::before {
 	content: "";
 	display: block;
-	background: url(../src/facebookshare.png) no-repeat;
-	width: 20px;
-	height: 20px;
+	background: url(../src/facebookshare.png);
+	background-repeat: no-repeat;
+	width: 1.2rem;
+	height: 1.2rem;
 	float: left;
-	margin: 0 6px;
+	margin: 0 0.2rem;
 }
-/*
-.facebook:hover {
-	border-style: solid;
-	height: auto;
-	grid-template-rows: 30px auto 30px;
-}
-
-
-.facebook:hover>div[id*="temp"] {
-	display: block!important;
-	text-shadow: none!important;
-	color: black!important;
-}
-*/
 
 /*
 Tumblr
 */
 
-.tumblr>.temp_A {
+.tumblr>.feedhead {
 	color: white;
 	background-color: rgba(54,70,93,0.6);
 }
 
-.tumblr>.temp_A::before {
-	background: url(../src/tumblr.png) no-repeat;
+.tumblr>.feedhead::before {
+	background: url(../src/tumblr.png);
+	background-repeat: no-repeat;
 }
 
 .tumblrmetadata {
@@ -490,43 +491,41 @@ Tumblr
 .tumblr .share::before {
 	content: "";
 	display: block;
-	background: url(../src/tumblrshare.png) no-repeat;
-	width: 20px;
-	height: 20px;
+	background: url(../src/tumblrshare.png);
+	background-repeat: no-repeat;
+	width: 1.2rem;
+	height: 1.2rem;
 	float: left;
-	margin: 0 6px;
+	margin: 0 0.2rem;
 }
 
 .tumblr .reblog::before {
 	content: "";
 	display: block;
-	background: url(../src/tumblrshare.png) no-repeat;
-	width: 20px;
-	height: 20px;
+	background: url(../src/tumblrshare.png);
+	background-repeat: no-repeat;
+	width: 1.2rem;
+	height: 1.2rem;
 	float: left;
-	margin: 0 6px;
+	margin: 0 0.2rem;
 }
 
 .tumblr .like::before {
 	content: "";
 	display: block;
-	background: url(../src/tumblrshare.png) no-repeat;
-	width: 20px;
-	height: 20px;
+	background: url(../src/tumblrshare.png);
+	background-repeat: no-repeat;
+	width: 1.2rem;
+	height: 1.2rem;
 	float: left;
-	margin: 0 6px;
+	margin: 0 0.2rem;
 }
 
 
 /* footer */
 .footer{
 	text-align: center;
-	height: 20px;
-
-/*
-	color: white;
-	background-color: rgba(0, 0, 0, 1);
-*/
+	height: 1.2rem;
 	color: black;
 	background-color: rgba(255,255,255,1);
 }
@@ -534,7 +533,7 @@ Tumblr
 @media (min-width: 1800px) {
 	.frame {
 		grid-template-columns: 20% 20% 20% 20% 20%;
-		grid-auto-rows: calc(11.25vw + 60px);
+		grid-auto-rows: calc(11.25vw + 3.5rem);
 	}
 	.showArticle {
 		grid-area: auto / auto / span 2 / span 2;
@@ -544,7 +543,7 @@ Tumblr
 @media (min-width: 1000px) {
 	.frame {
 		grid-template-columns: 25% 25% 25% 25%;
-		grid-auto-rows: calc(14vw + 60px);
+		grid-auto-rows: calc(14vw + 3.5rem);
 	}
 	.showArticle {
 		grid-area: auto / auto / span 2 / span 2;
@@ -554,7 +553,7 @@ Tumblr
 @media (max-width: 998.98px){
 	.frame {
 		grid-template-columns: 33.3% 33.3% 33.3%;
-		grid-auto-rows: calc(18.7vw + 60px);
+		grid-auto-rows: calc(18.7vw + 3.5rem);
 	}
 	.showArticle {
 		grid-area: auto / auto / span 2 / span 2;
@@ -564,7 +563,7 @@ Tumblr
 @media (max-width: 798.98px) {
 	.frame {
 		grid-template-columns: 50% 50%;
-		grid-auto-rows: calc(28.15vw + 60px);
+		grid-auto-rows: calc(28.15vw + 3.5rem);
 	}
 	.showArticle {
 		grid-area: auto / auto / auto / span 2;
@@ -572,7 +571,25 @@ Tumblr
 }
 
 
+:not(.showArticle)>.feedbody>*:not(:first-child) {
+	display: none;
+}
 
-.showArticle [id*="temp"] {
+:not(.showArticle)>.feedbody>*:first-child {
+	
+}
 
+:not(.showArticle)>.feedbody>:first-child img {
+
+}
+.row1 {
+	grid-row: auto / span 1;
+}
+
+.row2 {
+	grid-row: auto / span 2;
+}
+
+.row3 {
+	grid-row: auto / span 3;
 }
