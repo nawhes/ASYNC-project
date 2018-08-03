@@ -177,6 +177,27 @@ img{
 	
 }
 
+.B1_pic {
+	position: relative;
+
+	width: 100%;
+	height: 100%;
+	background-color: rgba(22, 22, 22, 0.7);
+}
+
+.B1_pic img {
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
 .showArticle .B1_pic {
 	position: relative;
 	float: left;
@@ -208,16 +229,46 @@ img{
 .temp_B2 {
 	padding: 1rem;
 	line-height: 150%;
+}
 
+.B2_text {
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
 
 .B2_text::first-letter {
 	font-size: 200%;
 }
 
+.showArticle .B2_text {
+	width: auto;
+	height: auto;
+}
+
 /* Single Pic with caption */
 .temp_B3{
 	position: relative;
+}
+
+.B3_pic {
+	position: relative;
+	background-color: rgba(22, 22, 22, 0.7);
+	width: 100%;
+	height: 100%;
+}
+
+.B3_pic img {
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
 .showArticle .B3_pic {
@@ -249,7 +300,7 @@ img{
 }
 
 /* iframe or vedio platform */
-.temp_B4{
+.temp_B4 {
 	position: relative;
 	top: 0;
 	left: 0;
@@ -258,13 +309,13 @@ img{
 	padding-bottom: 56.25%;
 }
 
+.showVideo {
+	grid-area: auto / auto / span 2 / span 2!important;
+}
+
 [class*="twitter"] p {
 	padding-left: 0.4rem;
 	text-decoration: underline rgb(0,172,237) wavy;
-}
-
-.comment {
-	display: none;
 }
 
 .feedfooter {
@@ -364,16 +415,16 @@ Twitch
 Youtube
 */
 
-.Youtube>.feedhead {
+.youtube>.feedhead {
 	color: white;
 	background-color: rgba(255,0,0,0.6);
 }
 
-.Youtube>.feedhead::before {
+.youtube>.feedhead::before {
 	background: url(../src/youtube.png) no-repeat;
 }
 
-.Youtube>.feedfooter {
+.youtube>.feedfooter {
 	color: white;
 	background-color: rgba(255,0,0,0.4);
 }
@@ -530,45 +581,7 @@ Tumblr
 	background-color: rgba(255,255,255,1);
 }
 
-@media (min-width: 1800px) {
-	.frame {
-		grid-template-columns: 20% 20% 20% 20% 20%;
-		grid-auto-rows: calc(11.25vw + 3.5rem);
-	}
-	.showArticle {
-		grid-area: auto / auto / span 2 / span 2;
-	}	
-}
 
-@media (min-width: 1000px) {
-	.frame {
-		grid-template-columns: 25% 25% 25% 25%;
-		grid-auto-rows: calc(14vw + 3.5rem);
-	}
-	.showArticle {
-		grid-area: auto / auto / span 2 / span 2;
-	}	
-}
-
-@media (max-width: 998.98px){
-	.frame {
-		grid-template-columns: 33.3% 33.3% 33.3%;
-		grid-auto-rows: calc(18.7vw + 3.5rem);
-	}
-	.showArticle {
-		grid-area: auto / auto / span 2 / span 2;
-	}	
-}
-
-@media (max-width: 798.98px) {
-	.frame {
-		grid-template-columns: 50% 50%;
-		grid-auto-rows: calc(28.15vw + 3.5rem);
-	}
-	.showArticle {
-		grid-area: auto / auto / auto / span 2;
-	}
-}
 
 
 :not(.showArticle)>.feedbody>*:not(:first-child) {
@@ -592,4 +605,48 @@ Tumblr
 
 .row3 {
 	grid-row: auto / span 3;
+}
+
+@media (min-width: 1800px) {
+	.frame {
+		grid-template-columns: 20% 20% 20% 20% 20%;
+		grid-auto-rows: calc(11.25vw + 3.5rem);
+	}
+	.showArticle {
+		grid-column: auto / span 2;
+	}
+}
+
+@media (min-width: 1000px) {
+	.frame {
+		grid-template-columns: 25% 25% 25% 25%;
+		grid-auto-rows: calc(14vw + 3.5rem);
+	}
+	.showArticle {
+		grid-column: auto / span 2;
+	}
+}
+
+@media (max-width: 998.98px){
+	.frame {
+		grid-template-columns: 33.3% 33.3% 33.3%;
+		grid-auto-rows: calc(18.7vw + 3.5rem);
+	}
+	.showArticle {
+		grid-column: auto / span 2;
+	}
+}
+
+@media (max-width: 798.98px) {
+	.frame {
+		grid-template-columns: 50% 50%;
+		grid-auto-rows: calc(28.15vw + 3.5rem);
+	}
+	.showArticle {
+		grid-column: auto / span 2;
+	}
+}
+
+.showArticle .feedbody{
+	overflow: auto;
 }
