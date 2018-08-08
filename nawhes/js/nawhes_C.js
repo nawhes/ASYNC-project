@@ -43,7 +43,7 @@ $(function(){
 			$(this).parent().toggleClass("showVideo").toggleClass("unshowArticle");
 			return;
 		}
-		$(this).parent().not(".youtube , .twitch").toggleClass("showArticle").toggleClass("unshowArticle");
+		// $(this).parent().not(".youtube , .twitch").toggleClass("showArticle").toggleClass("unshowArticle");
 	});
 
 

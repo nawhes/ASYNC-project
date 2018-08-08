@@ -18,40 +18,10 @@ https://icon-icons.com/ja/%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3/%E6%8B%A1%E5%A4%A
 
 https://www.flaticon.com/free-icon/full-screen-button_1481
 
-
-
-미작성
-
-동영상플랫폼을 할거면 16:9(1.78:1) ~ 4:3(1.33:1)
-
-
 https://dribbble.com/shots/3030754-Like-animation
 
 https://cs.wikipedia.org/wiki/Soubor:Symbol_rain_64.svg
 
+http://rjkoehler.tumblr.com/page/4
 
-피드모아보기에서
-피드헤더 피드바디 피드푸터
-피드바디에는 사진
-
-피드확장했을 때 댓글작성하고 댓글입력가능..
-댓글작성하고 댓글입력을 display none 하고 viewArticle 아래에다가 display block
-
-
-css 단위 px들 반응형으로 바꾸기
-피드계산기 
-
-
-feed 마진 헤드 풋터 총 4.1rem
-feedhead 1.7rem
-feedfootter 1.8rem
-feedmargin 0.3rem 
-
-460.83
-
-
-Feed height auto setting
-
-every length unit convert to relative unit
-
-Feed can be expanded
+https://www.travelandleisure.com/travel-guide/whistler

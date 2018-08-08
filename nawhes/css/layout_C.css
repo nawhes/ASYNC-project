@@ -579,7 +579,7 @@ Tumblr
 
 
 :not(.showArticle)>.feedbody>*:not(:first-child) {
-	display: none;
+/*	display: none;*/
 }
 
 .row1 {
@@ -645,4 +645,13 @@ Tumblr
 	bottom: 0;
 	left: 0;
 	right: 0;
+}
+
+.unshowArticle .B1_pic {
+	height: 50%;
+}
+
+.unshowArticle .B1_text {
+	height: 50%;
+	overflow: auto;
 }

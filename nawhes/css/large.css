@@ -1,0 +1,7 @@
+	.frame {
+		grid-template-columns: 25% 25% 25% 25%;
+		grid-auto-rows: calc(14vw + 3.5rem);
+	}
+	.showArticle {
+		grid-row-end: span 2;
+	}

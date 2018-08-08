@@ -142,6 +142,10 @@ img{
 	box-shadow: 0 0 0.1rem;
 }
 
+.expand {
+	float: right;
+}
+
 .expand::after {
 	content: "";
 	position: absolute;
@@ -172,135 +176,101 @@ img{
 	overflow: hidden;
 }
 
-/* Text with Pic */
-.temp_B1 {
-	
-}
-
-.B1_pic {
-	position: relative;
-
-	width: 100%;
-	height: 100%;
-	background-color: rgba(22, 22, 22, 0.7);
-}
-
-.B1_pic img {
-	position: absolute;
-	max-width: 100%;
-	max-height: 100%;
-	width: auto;
-	height: auto;
-	margin: auto;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-.showArticle .B1_pic {
-	position: relative;
-	float: left;
-	width: 50%;
-	height: 100%;
-	background-color: rgba(22, 22, 22, 0.7);
-}
-
-.showArticle .B1_pic img {
-	position: absolute;
-	max-width: 100%;
-	max-height: 100%;
-	width: auto;
-	height: auto;
-	margin: auto;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-.showArticle .B1_text {
-	padding: 10px;
-	height: 100%;
+.coreContent {
 	overflow: auto;
 }
 
-/* Single text */
-.temp_B2 {
-	padding: 1rem;
-	line-height: 150%;
-}
-
-.B2_text {
-	position: relative;
+.subContent {
 	width: 100%;
 	height: 100%;
+	padding: 0.4rem;
+	overflow: auto;
+}
+
+.unshowArticle .coreContent {
+	width: 100%;
+	height: 100%;
+}
+
+.unshowArticle .coreContent img {
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.unshowArticle .subContent {
+	display: none;
+}
+
+.showArticle .coreContent {
+	position: relative;
+	width: 100%;
+	height: 50%;
+}
+
+.showArticle .coreContent img {
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.subContent::before {
+	content: "";
+	display: block;
+	border-bottom-style: dashed;
+	border-bottom-color: rgba(22, 22, 22, 0.2);
+	margin-bottom: 1rem;
+}
+
+.showArticle .subContent {
+	height: 50%;
+}
+
+
+/* coreContent is img, sometimes video(ex..facebook live) */
+.temp_B1 {
+	position: relative;
+}
+
+.temp_B1 .coreContent {
+	background-color: rgba(22, 22, 22, 0.7);
+}
+
+.temp_B1 .coreContent {
+	background-color: rgba(22, 22, 22, 0.7);
+}
+
+/* coreContent is not img */
+.temp_B2 {
+	position: relative;
+	padding: 1rem;
+	line-height: 150%;
 }
 
 .B2_text::first-letter {
 	font-size: 200%;
 }
 
-.showArticle .B2_text {
-	width: auto;
-	height: auto;
-}
-
-/* Single Pic with caption */
-.temp_B3{
-	position: relative;
-}
-
-.B3_pic {
-	position: relative;
-	background-color: rgba(22, 22, 22, 0.7);
-	width: 100%;
-	height: 100%;
-}
-
-.B3_pic img {
-	position: absolute;
-	max-width: 100%;
-	max-height: 100%;
-	width: auto;
-	height: auto;
-	margin: auto;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-.showArticle .B3_pic {
-	position: relative;
-	background-color: rgba(22, 22, 22, 0.7);
-	width: auto;
-	height: 100%;
-}
-
-.showArticle .B3_pic img {
-	position: absolute;
-	max-width: 100%;
-	max-height: 100%;
-	width: auto;
-	height: auto;
-	margin-top: auto;
-	margin-bottom: auto;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-.showArticle .B3_text {
-	position: absolute;
-	top: 0.4rem;
-	right: 0.4rem;
-	color: white;
-}
-
-/* iframe or vedio platform */
+/* coreContent is Video, not important subContent */
 .temp_B4 {
+	position: relative;
+}
+
+.temp_B4 .coreContent {
 	position: relative;
 	top: 0;
 	left: 0;
@@ -317,6 +287,11 @@ img{
 	padding-left: 0.4rem;
 	text-decoration: underline rgb(0,172,237) wavy;
 }
+
+
+/*
+Footer
+*/
 
 .feedfooter {
 	height: 1.8rem;
@@ -457,19 +432,19 @@ Facebook
 
 }
 
-.facebook .like {
+.facebookmetadata .like {
 	display: inline-block;
 }
 
-.facebook .comment {
+.facebookmetadata .comment {
 	display: inline-block;
 }
 
-.facebook .share {
+.facebookmetadata .share {
 	display: inline-block;
 }
 
-.facebook .like::before {
+.facebookmetadata .like::before {
 	content: "";
 	display: block;
 	background: url(../src/facebooklike.png);
@@ -480,7 +455,7 @@ Facebook
 	margin: 0 0.2rem;
 }
 
-.facebook .comment::before {
+.facebookmetadata .comment::before {
 	content: "";
 	display: block;
 	background: url(../src/facebookcomment.png);
@@ -491,7 +466,7 @@ Facebook
 	margin: 0 0.2rem;
 }
 
-.facebook .share::before {
+.facebookmetadata .share::before {
 	content: "";
 	display: block;
 	background: url(../src/facebookshare.png);
@@ -583,70 +558,10 @@ Tumblr
 
 
 
-
-:not(.showArticle)>.feedbody>*:not(:first-child) {
-	display: none;
-}
-
-:not(.showArticle)>.feedbody>*:first-child {
-	
-}
-
-:not(.showArticle)>.feedbody>:first-child img {
-
-}
-.row1 {
-	grid-row: auto / span 1;
-}
-
 .row2 {
-	grid-row: auto / span 2;
+	grid-row-end: span 2;
 }
 
-.row3 {
-	grid-row: auto / span 3;
-}
-
-@media (min-width: 1800px) {
-	.frame {
-		grid-template-columns: 20% 20% 20% 20% 20%;
-		grid-auto-rows: calc(11.25vw + 3.5rem);
-	}
-	.showArticle {
-		grid-column: auto / span 2;
-	}
-}
-
-@media (min-width: 1000px) {
-	.frame {
-		grid-template-columns: 25% 25% 25% 25%;
-		grid-auto-rows: calc(14vw + 3.5rem);
-	}
-	.showArticle {
-		grid-column: auto / span 2;
-	}
-}
-
-@media (max-width: 998.98px){
-	.frame {
-		grid-template-columns: 33.3% 33.3% 33.3%;
-		grid-auto-rows: calc(18.7vw + 3.5rem);
-	}
-	.showArticle {
-		grid-column: auto / span 2;
-	}
-}
-
-@media (max-width: 798.98px) {
-	.frame {
-		grid-template-columns: 50% 50%;
-		grid-auto-rows: calc(28.15vw + 3.5rem);
-	}
-	.showArticle {
-		grid-column: auto / span 2;
-	}
-}
-
-.showArticle .feedbody{
-	overflow: auto;
+.col2 {
+	grid-column-end: span 2;
 }
