@@ -77,6 +77,18 @@ $(function(){
 
 	$(".feed").addClass("unshowArticle");
 
+	$(".selectPic").hover(function() {
+		$(this).css({"opacity":"1"});
+		$(this).siblings().css("opacity","0.3");
+	}, function() {
+		$(this).css({"opacity":"0"});
+		$(this).siblings().css("opacity","1");
+	});
 
+	$(".selectPic").find("img").click(function() {
+		var swap = $(this).attr("src");
+		$(this).attr("src", $(this).parent().parent().siblings().attr("src"));
+		$(this).parent().parent().siblings().attr("src",swap);
+	});
 
 });
