@@ -57,7 +57,7 @@ img{
 #cloudcontainer {
 	display: inherit;
 	float: left;
-	width: 80%;
+	width: 60%;
 }
 
 #cloud {
@@ -82,10 +82,53 @@ img{
 	to {left: calc(100% - 60px);}
 }
 
+#searchContainer {
+	position: relative;
+	float: left;
+	width: 25%;
+	height: 3vh;
+	min-height: 30px;
+}
+
+#searchContainer input {
+	float: left;
+	height: -webkit-fill-available;
+	padding: 0.3rem;
+	border: none;
+	border-radius: 0.5rem;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+#searchContainer #searchBtn {
+	min-width: 30px;
+	min-height: 30px;
+	width: 3vh;
+	height: 3vh;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	background-image: url(../src/white-search-icon-.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#searchContainer #searchInput {
+	max-width: calc(100% - 30px);
+	width: 100%;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#searchContainer #searchInput:hover , #searchContainer #searchInput:focus , #searchContainer #searchInput:active {
+	outline: none;
+	background: rgb(255, 255, 255);
+}
+
 #menu_wrap {
 	display: inherit;
 	float: left;
-	width: 10%;
+	width: 5%;
 	text-align: right;
 }
 
@@ -100,23 +143,40 @@ img{
 
 #menu_dropdown {
 	display: none;
-	position: absolute;
-	background-color: white;
-	padding: 1rem;
-	line-height: 150%;
 }
 
 #menu:hover #menu_dropdown {
-	border-style: solid;
+	position: absolute;
 	display: block;
+	background-color: rgba(255, 255, 255, 0);
 	right: 0;
 	z-index: 1;
 }
 
 #menu_dropdown>a {
-	display: block;
+	width: 2rem;
+	height: 2rem;
+	background: black;
+	display: inline-block;
 }
 
+#menu_dropdown #home {
+	background: url(../src/home.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#menu_dropdown #people {
+	background: url(../src/people.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#menu_dropdown #setting {
+	background: url(../src/setting.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
 
 /* frame */
 
@@ -260,7 +320,7 @@ img{
 	content: "";
 	display: block;
 	border-bottom-style: dashed;
-	border-bottom-color: rgba(22, 22, 22, 0.2);
+	border-bottom-color: rgba(22, 22, 22, 0.4);
 	margin-bottom: 1rem;
 }
 
@@ -275,11 +335,7 @@ img{
 }
 
 .temp_B1 .coreContent {
-	background-color: rgba(22, 22, 22, 0.7);
-}
-
-.temp_B1 .coreContent {
-	background-color: rgba(22, 22, 22, 0.7);
+	background-color: rgba(22, 22, 22, 0.5);
 }
 
 /* coreContent is not img */
@@ -352,7 +408,8 @@ Instagram
 }
 
 .instagram>.feedfooter {
-
+	color: white;
+	background: linear-gradient(45deg, rgba(252,204,99,0.4), rgba(138, 58, 185, 0.4));
 }
 
 .instagrammetadata {
@@ -413,6 +470,11 @@ Twitch
 	background-repeat: no-repeat;
 }
 
+.twitch>.feedfooter {
+	color: white;
+	background-color: rgba(100,65,165,0.4);
+}
+
 .twitchmetadata {
 
 }
@@ -457,7 +519,7 @@ Facebook
 
 .facebook>.feedfooter{
 	color: white;
-	background-color: rgba(36,103,178,0.4);
+	background-color: rgba(59,89,152,0.4);
 }
 
 .facebookmetadata{
@@ -521,6 +583,11 @@ Tumblr
 .tumblr>.feedhead::before {
 	background: url(../src/tumblr.png);
 	background-repeat: no-repeat;
+}
+
+.tumblr>.feedfooter {
+	color: white;
+	background-color: rgba(54,70,93,0.4);
 }
 
 .tumblrmetadata {

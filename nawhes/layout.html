@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/layout_A.css">
-	<link id="scale" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" id="scale">
 	<link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/nawhes_A.js"></script>
@@ -19,12 +19,18 @@
 			<div id="cloud">
 			</div>
 		</div>
+		<div id="searchContainer">
+			<form action="">
+				<input type="submit" id="searchBtn" value="">
+				<input type="search" id="searchInput" placeholder="Search..">
+			</form>
+		</div>
 		<div id="menu_wrap">
 			<div id="menu">
 				<section id="menu_dropdown">
-					<a href="#">Login</a>
-					<a href="#">Review</a>
-					<a href="#">Edit</a>
+					<a href="#" id="home"></a>
+					<a href="#" id="people"></a>
+					<a href="#" id="setting"></a>
 				</section>
 			</div>
 		</div>
@@ -159,7 +165,7 @@
 			<div class="temp_B2 feedbody">
 				<div class="coreContent">
 					<p>Official</p>
-					<span>I had Five Guys Hamburger :) ^_^</span>
+					<span>Fall semester Calendar</span>
 				</div>
 				<div class="subContent">
 					<div class="comment">
