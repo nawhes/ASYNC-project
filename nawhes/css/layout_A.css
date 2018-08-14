@@ -6,7 +6,7 @@
 body{
 	font-family: 'Sunflower', sans-serif;
 	margin: 0;
-	min-height: 100%
+	min-height: 100%;
 }
 
 iframe{
@@ -156,8 +156,8 @@ img{
 #menu_dropdown>a {
 	width: 2rem;
 	height: 2rem;
-	background: black;
-	display: inline-block;
+	display: block;
+	margin: 0.5rem;
 }
 
 #menu_dropdown #home {
@@ -178,12 +178,66 @@ img{
 	background-size: contain;
 }
 
+/* story */
+.story {
+	position: relative;
+	text-align: center;
+	display: block;
+	margin-top: 2rem;
+}
+
+.storyItem {
+	position: relative;
+	display: inline-block;
+	width: 8vw;
+	height: 8vw;
+	transform-style: preserve-3d;
+	transition: all 0.5s ease;
+}
+
+.storyItem:hover {
+	transform: rotateX(180deg);
+}
+
+.profileIcon {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 2px solid #f5f5f5;
+	border-radius: 50%;
+	box-shadow: 0 0 3px gray;
+	backface-visibility: hidden;
+	overflow: hidden;
+}
+
+.profileID {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	transform: rotateX(180deg);
+	text-align: center;
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 50%;
+	overflow: hidden;
+	font-size: 1vw;
+}
+
+.storyLoad {
+	width: 50%;
+	margin-top: 2vw;
+	margin-left: 2vw;
+	border-style: solid;
+	border-width: 0.05vw;
+}
+
+
 /* frame */
+
 
 .frame{
 	background: linear-gradient(180deg, rgba(102,201,255,1), rgba(255, 255, 255, 1));
 	display: grid;
-
 }
 
 .frame::after{
@@ -543,6 +597,7 @@ Facebook
 	display: block;
 	background: url(../src/facebooklike.png);
 	background-repeat: no-repeat;
+	background-size: contain;
 	width: 1.2rem;
 	height: 1.2rem;
 	float: left;
@@ -552,8 +607,9 @@ Facebook
 .facebookmetadata .comment::before {
 	content: "";
 	display: block;
-	background: url(../src/facebookcomment.png);
+	background: url(../src/comment.png);
 	background-repeat: no-repeat;
+	background-size: contain;
 	width: 1.2rem;
 	height: 1.2rem;
 	float: left;
@@ -563,8 +619,9 @@ Facebook
 .facebookmetadata .share::before {
 	content: "";
 	display: block;
-	background: url(../src/facebookshare.png);
+	background: url(../src/share.png);
 	background-repeat: no-repeat;
+	background-size: contain;
 	width: 1.2rem;
 	height: 1.2rem;
 	float: left;
@@ -616,8 +673,9 @@ Tumblr
 .tumblr .share::before {
 	content: "";
 	display: block;
-	background: url(../src/tumblrshare.png);
+	background: url(../src/share.png);
 	background-repeat: no-repeat;
+	background-size: contain;
 	width: 1.2rem;
 	height: 1.2rem;
 	float: left;
@@ -627,8 +685,9 @@ Tumblr
 .tumblr .reblog::before {
 	content: "";
 	display: block;
-	background: url(../src/tumblrshare.png);
+	background: url(../src/share.png);
 	background-repeat: no-repeat;
+	background-size: contain;
 	width: 1.2rem;
 	height: 1.2rem;
 	float: left;
@@ -638,8 +697,9 @@ Tumblr
 .tumblr .like::before {
 	content: "";
 	display: block;
-	background: url(../src/tumblrshare.png);
+	background: url(../src/share.png);
 	background-repeat: no-repeat;
+	background-size: contain;
 	width: 1.2rem;
 	height: 1.2rem;
 	float: left;

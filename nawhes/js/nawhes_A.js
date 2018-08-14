@@ -54,19 +54,6 @@ $(function(){
 		scale();
 	});
 
-	//feedheight
-	// $(".feed").find(".feedhead").addClass(function(){
-	// 	if ($(this).parent().hasClass("twitch") || $(this).parent().hasClass("youtube")) {
-	// 		return "expand";
-	// 	}
-	// 	if ($(this).parent().find(".feedbody").children().first().height() > feedheight) {
-	// 		return "expand";
-	// 	}
-	// 	return;
-	// });
-
-
-
 	$(".feedhead").click(function(){
 		if ($(this).parent().hasClass("twitch") || $(this).parent().hasClass("youtube")) {
 			$(this).parent().toggleClass("showVideo").toggleClass("unshowArticle");
@@ -91,4 +78,7 @@ $(function(){
 		$(this).parent().parent().siblings().attr("src",swap);
 	});
 
+	$("#cloud").click(function() {
+		$(".story").slideToggle("showStory");
+	});
 });
