@@ -22,15 +22,10 @@ $(function(){
 		// framewidth - margin(0.3rem , left and right)
 		var feedheight = feedwidth * 0.5625;
 		// (feedwidth : feedheight = 16 : 9)
-
-		console.log("frame width = " + framewidth);
-		console.log("feed width = " + feedwidth);
-		console.log("feedbody height = " + feedheight);
-		console.log("feed height = " + feedheight * 2 + rootfontsize * 4.1 / 10);
 	}
 
-	function notIntereted(targetElement){
-		//deep learning
+	function notInterested(targetElement){
+		//set infomation about notInterested
 		targetElement.remove();
 	}
 
@@ -45,8 +40,10 @@ $(function(){
 		return;
 	})
 
+	$(".subContent").hide();
+
 	$(".expand").click(function(){
-		notIntereted($(this).parent().parent());
+		notInterested($(this).parent().parent());
 	})
 
 	scale();
@@ -57,9 +54,16 @@ $(function(){
 	$(".feedhead").click(function(){
 		if ($(this).parent().hasClass("twitch") || $(this).parent().hasClass("youtube")) {
 			$(this).parent().toggleClass("showVideo").toggleClass("unshowArticle");
+			var width = $(this).width();
+			var height = $(this).next().height();
+			height = height - width * 0.5625;
+			$(this).next().find(".subContent").css("height",height);
+			$(this).next().find(".subContent").slideToggle("fast");
 			return;
 		}
 		$(this).parent().toggleClass("showArticle").toggleClass("unshowArticle");
+		$(this).next().find(".subContent").slideToggle("fast");
+
 	});
 
 	$(".feed").addClass("unshowArticle");
@@ -79,6 +83,7 @@ $(function(){
 	});
 
 	$("#cloud").click(function() {
-		$(".story").slideToggle("showStory");
+		$(".story").slideToggle("fast");
 	});
+
 });

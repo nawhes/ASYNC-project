@@ -154,14 +154,20 @@ img{
 }
 
 #menu_dropdown>a {
-	width: 2rem;
-	height: 2rem;
+	width: 3vw;
+	height: 3vw;
 	display: block;
 	margin: 0.5rem;
 }
 
 #menu_dropdown #home {
 	background: url(../src/home.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#menu_dropdown #person {
+	background: url(../src/person.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 }
@@ -252,7 +258,7 @@ img{
 	overflow: hidden;
 	display: grid;
 	grid-template-rows: 1.7rem auto 1.7rem;
-	background-color: white;
+	background-color: rgba(255, 255, 255, 1);
 	box-shadow: 0 0 0.1rem;
 }
 
@@ -348,7 +354,7 @@ img{
 }
 
 .unshowArticle .subContent {
-	display: none;
+
 }
 
 .showArticle .coreContent {
@@ -389,7 +395,7 @@ img{
 }
 
 .temp_B1 .coreContent {
-	background-color: rgba(22, 22, 22, 0.5);
+	background-color: rgba(25, 53, 66, 0.8);
 }
 
 /* coreContent is not img */
