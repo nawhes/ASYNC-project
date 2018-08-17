@@ -29,10 +29,7 @@ $(function(){
 		targetElement.remove();
 	}
 
-	scale();
-	$(window).resize(function(){
-		scale();
-	});
+
 
 	$(".feed").addClass(function(){
 		var width = $(this).find(".feedbody").find(".coreContent").find("img").width();
@@ -48,6 +45,11 @@ $(function(){
 	$(".notInterested").click(function(){
 		notInterested($(this).parent().parent());
 	})
+
+	scale();
+	$(window).resize(function(){
+		scale();
+	});
 
 	$(".feedhead").click(function(){
 		if ($(this).parent().hasClass("twitch") || $(this).parent().hasClass("youtube")) {
