@@ -1,0 +1,7 @@
+	.frame {
+		grid-template-columns: 33.3% 33.3% 33.3%;
+		grid-auto-rows: calc(18.7vw + 3.5rem);
+	}
+	.showArticle {
+		grid-row-end: span 2;
+	}
